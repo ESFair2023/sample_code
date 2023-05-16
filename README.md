@@ -2,7 +2,7 @@
 
 ---
 
-**What is in this repository?**
+## What is in this repository?
 
 
 
@@ -12,7 +12,7 @@ For this example, we use the MobileNetV2 as the classifier. You can use a differ
 
 ___
 
-**How do I run these scripts?**
+## How do I run these scripts?
 
 
 You can run this classifier code by installing the requirements
