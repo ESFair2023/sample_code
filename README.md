@@ -1,6 +1,6 @@
 # Python example code for the ESFair Contest ESWEEK 2023.
 
----
+
 
 ## What is in this repository?
 
@@ -10,7 +10,7 @@ This repository contains a simple example to illustrate how to train the model w
 
 For this example, we use the MobileNetV2 as the classifier. You can use a different classifier for your implementation.
 
-___
+
 
 ## How do I run these scripts?
 
