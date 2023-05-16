@@ -19,7 +19,7 @@ You can run this classifier code by installing the requirements
 
 `pip install requirements.txt`
 
-And change the dataset directory in argparser.py
+change the dataset directory in argparser.py,
 
 and run 
 
