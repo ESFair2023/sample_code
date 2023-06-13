@@ -75,9 +75,17 @@ if __name__ == '__main__':
     minority_acc = groups_acc_dict['G10']
     for G, group_acc in groups_acc_dict.items():
         abs_difference += abs(group_acc - minority_acc)
-    SPD = abs_difference / len(groups_acc_dict)
-    fairness_score = ((args.spd_para - SPD) / args.spd_para) / 3
-    acc_score = overall_acc / 3
+
+    #this metric (SPD) refers to https://www.mathworks.com/help/risk/explore-fairness-metrics-for-credit-scoring-model.html
+    SPD = abs_difference / len(groups_acc_dict) 
+    
+    #SPD refers to the unfairness. And args.spd_para is used to scale and normorlize the fairness score.
+    if SPD > args.spd_para:
+        fairness_score = 0
+    else:
+        fairness_score = ((args.spd_para - SPD) / args.spd_para) / 3 #fairness score counts 1/3
+        
+    acc_score = overall_acc / 3 #acc score counts 1/3
     print(f"SPD: {SPD}")
     exp_logger.print(f"SPD: {SPD}\n")
     print(f"Fairness score: {fairness_score}")
